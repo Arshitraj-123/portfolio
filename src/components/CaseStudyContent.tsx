@@ -43,12 +43,14 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
                 <div className="mt-8 p-4 bg-[#252a3e] rounded-xl inline-flex items-center gap-3">
                     <ExternalLink size={20} className="text-[#f56565]" />
                     <span className="text-[#a0aec0]">Live at</span>
-                    <button
-                        onClick={() => alert('Sorry, cannot be previewed now')}
+                    <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-[#f56565] hover:underline font-medium cursor-pointer"
                     >
                         {project.liveUrl.replace('https://', '')}
-                    </button>
+                    </a>
                 </div>
             </motion.section>
 
