@@ -220,106 +220,49 @@
                 <!-- Projects Carousel -->
                 <div class="projects-carousel">
                     <div class="projects-slider" id="projectsSlider">
-                        <!-- Project 1 -->
+
+                        <!-- Project 1: TaskFlow -->
                         <div class="project-slide active" data-index="0">
                             <div class="project-images">
                                 <div class="project-image-stack">
                                     <div class="project-img project-img-back"
                                         style="--project-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                        <div class="project-screen">🚀</div>
+                                        <div class="project-screen">📋</div>
                                     </div>
                                     <div class="project-img project-img-front"
-                                        style="--project-gradient: linear-gradient(135deg, #764ba2 0%, #f56565 100%);">
+                                        style="--project-gradient: linear-gradient(135deg, #764ba2 0%, #667eea 100%);">
                                         <div class="project-screen">💻</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-details">
-                                <h3 class="project-title">Shop Street - An e-commerce full stack webapp</h3>
+                                <h3 class="project-title">TaskFlow App</h3>
                                 <p class="project-description">
-                                    A fully responsive full stack e-commerce webapp made with Next.js and secure
-                                    authentication with Google's Firebase Auth. Here users can also sell via creating a
-                                    store and listing their products and buyers can buy using imaginary money given to
-                                    them.
+                                    A modern task management application with secure JWT authentication, real-time task
+                                    updates, browser notifications for deadlines, and password recovery. Built with
+                                    React 19 and Express.js.
                                 </p>
                                 <div class="project-tech">
                                     <span class="tech-label">TechStack</span>
                                     <div class="project-tags">
-                                        <span class="tag">Next.js</span>
-                                        <span class="tag">Tailwind CSS</span>
-                                        <span class="tag">Firebase</span>
-                                        <span class="tag">MongoDB</span>
-                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">React 19</span>
+                                        <span class="tag">Express.js</span>
+                                        <span class="tag">SQLite</span>
+                                        <span class="tag">JWT</span>
+                                        <span class="tag">Vite</span>
                                     </div>
                                 </div>
                                 <div class="project-actions">
-                                    <a href="#" class="action-btn action-live"
-                                        onclick="alert('Sorry, cannot be previewed now'); return false;">
+                                    <a href="https://taskflow-app.vercel.app" target="_blank"
+                                        class="action-btn action-live">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <circle cx="12" cy="12" r="10" />
                                             <circle cx="12" cy="12" r="3" />
                                         </svg>
                                         Live view
                                     </a>
-                                    <a href="#" class="action-btn action-code">
-                                        <svg viewBox="0 0 24 24" fill="currentColor">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                        </svg>
-                                        Code
-                                    </a>
-                                    <a href="case-studies/shopstreet.html" class="action-btn action-case">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                                            <polyline points="14 2 14 8 20 8" />
-                                        </svg>
-                                        Case study
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div class="project-slide" data-index="1">
-                            <div class="project-images">
-                                <div class="project-image-stack">
-                                    <div class="project-img project-img-back"
-                                        style="--project-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                        <div class="project-screen">💬</div>
-                                    </div>
-                                    <div class="project-img project-img-front"
-                                        style="--project-gradient: linear-gradient(135deg, #f5576c 0%, #ff9a56 100%);">
-                                        <div class="project-screen">📱</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-details">
-                                <h3 class="project-title">ChatConnect - Real-Time Messaging Platform</h3>
-                                <p class="project-description">
-                                    A modern chat application with real-time messaging, file sharing,
-                                    and video calls using WebSocket and WebRTC technologies. Features include
-                                    group chats, message reactions, and end-to-end encryption.
-                                </p>
-                                <div class="project-tech">
-                                    <span class="tech-label">TechStack</span>
-                                    <div class="project-tags">
-                                        <span class="tag">Vue.js</span>
-                                        <span class="tag">Socket.io</span>
-                                        <span class="tag">Firebase</span>
-                                        <span class="tag">WebRTC</span>
-                                        <span class="tag">Node.js</span>
-                                    </div>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="action-btn action-live"
-                                        onclick="alert('Sorry, cannot be previewed now'); return false;">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <circle cx="12" cy="12" r="3" />
-                                        </svg>
-                                        Live view
-                                    </a>
-                                    <a href="#" class="action-btn action-code">
+                                    <a href="https://github.com/Arshitraj-123/Task-flow" target="_blank"
+                                        class="action-btn action-code">
                                         <svg viewBox="0 0 24 24" fill="currentColor">
                                             <path
                                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -337,54 +280,53 @@
                             </div>
                         </div>
 
-                        <!-- Project 3 -->
-                        <div class="project-slide" data-index="2">
+                        <!-- Project 2: BizFlow -->
+                        <div class="project-slide" data-index="1">
                             <div class="project-images">
                                 <div class="project-image-stack">
                                     <div class="project-img project-img-back"
-                                        style="--project-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                                        <div class="project-screen">📊</div>
+                                        style="--project-gradient: linear-gradient(135deg, #f56565 0%, #ed8936 100%);">
+                                        <div class="project-screen">💼</div>
                                     </div>
                                     <div class="project-img project-img-front"
-                                        style="--project-gradient: linear-gradient(135deg, #00f2fe 0%, #43e97b 100%);">
-                                        <div class="project-screen">📈</div>
+                                        style="--project-gradient: linear-gradient(135deg, #ed8936 0%, #f56565 100%);">
+                                        <div class="project-screen">📊</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-details">
-                                <h3 class="project-title">DataViz Pro - Analytics Dashboard</h3>
+                                <h3 class="project-title">BizFlow</h3>
                                 <p class="project-description">
-                                    An interactive data visualization dashboard with charts, graphs,
-                                    and real-time data updates for business intelligence. Features drag-and-drop
-                                    widgets and customizable reporting.
+                                    A full-stack CRM application with Angular 19 and Express.js. Features Firebase Auth,
+                                    Firestore real-time sync, client management, and a Material UI dashboard.
                                 </p>
                                 <div class="project-tech">
                                     <span class="tech-label">TechStack</span>
                                     <div class="project-tags">
-                                        <span class="tag">Angular</span>
-                                        <span class="tag">D3.js</span>
-                                        <span class="tag">Python</span>
-                                        <span class="tag">PostgreSQL</span>
-                                        <span class="tag">FastAPI</span>
+                                        <span class="tag">Angular 19</span>
+                                        <span class="tag">Firebase</span>
+                                        <span class="tag">NgRx</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Material UX</span>
                                     </div>
                                 </div>
                                 <div class="project-actions">
-                                    <a href="#" class="action-btn action-live"
-                                        onclick="alert('Sorry, cannot be previewed now'); return false;">
+                                    <a href="https://bizflow.vercel.app" target="_blank" class="action-btn action-live">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <circle cx="12" cy="12" r="10" />
                                             <circle cx="12" cy="12" r="3" />
                                         </svg>
                                         Live view
                                     </a>
-                                    <a href="#" class="action-btn action-code">
+                                    <a href="https://github.com/Arshitraj-123/Bizz-flow" target="_blank"
+                                        class="action-btn action-code">
                                         <svg viewBox="0 0 24 24" fill="currentColor">
                                             <path
                                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                         </svg>
                                         Code
                                     </a>
-                                    <a href="case-studies/aibot.html" class="action-btn action-case">
+                                    <a href="case-studies/bizzflow.html" class="action-btn action-case">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
                                             <polyline points="14 2 14 8 20 8" />
@@ -395,54 +337,54 @@
                             </div>
                         </div>
 
-                        <!-- Project 4 -->
-                        <div class="project-slide" data-index="3">
+                        <!-- Project 3: CyberTrap -->
+                        <div class="project-slide" data-index="2">
                             <div class="project-images">
                                 <div class="project-image-stack">
                                     <div class="project-img project-img-back"
-                                        style="--project-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                                        <div class="project-screen">🤖</div>
+                                        style="--project-gradient: linear-gradient(135deg, #38b2ac 0%, #319795 100%);">
+                                        <div class="project-screen">🕷️</div>
                                     </div>
                                     <div class="project-img project-img-front"
-                                        style="--project-gradient: linear-gradient(135deg, #38f9d7 0%, #667eea 100%);">
-                                        <div class="project-screen">✨</div>
+                                        style="--project-gradient: linear-gradient(135deg, #319795 0%, #38b2ac 100%);">
+                                        <div class="project-screen">🛡️</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-details">
-                                <h3 class="project-title">TaskAI - AI-Powered Task Manager</h3>
+                                <h3 class="project-title">CyberTrap</h3>
                                 <p class="project-description">
-                                    A smart task management app with AI-powered prioritization,
-                                    natural language processing, and intelligent scheduling. Integrates
-                                    with calendar apps and provides productivity insights.
+                                    An AI-powered honey-pot that engages scammers using Mrs. Shanthi persona to extract
+                                    intelligence. Features 4-stage extraction funnel and multi-language support.
                                 </p>
                                 <div class="project-tech">
                                     <span class="tech-label">TechStack</span>
                                     <div class="project-tags">
-                                        <span class="tag">Next.js</span>
-                                        <span class="tag">OpenAI</span>
-                                        <span class="tag">Supabase</span>
-                                        <span class="tag">Tailwind</span>
-                                        <span class="tag">Vercel</span>
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Groq LLM</span>
+                                        <span class="tag">FastAPI</span>
+                                        <span class="tag">React 19</span>
+                                        <span class="tag">TypeScript</span>
                                     </div>
                                 </div>
                                 <div class="project-actions">
-                                    <a href="#" class="action-btn action-live"
-                                        onclick="alert('Sorry, cannot be previewed now'); return false;">
+                                    <a href="https://cybertrap-demo.onrender.com" target="_blank"
+                                        class="action-btn action-live">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <circle cx="12" cy="12" r="10" />
                                             <circle cx="12" cy="12" r="3" />
                                         </svg>
                                         Live view
                                     </a>
-                                    <a href="#" class="action-btn action-code">
+                                    <a href="https://github.com/Arshitraj-123/Cyber-Trap" target="_blank"
+                                        class="action-btn action-code">
                                         <svg viewBox="0 0 24 24" fill="currentColor">
                                             <path
                                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                         </svg>
                                         Code
                                     </a>
-                                    <a href="case-studies/cryptotracker.html" class="action-btn action-case">
+                                    <a href="case-studies/cybertrap.html" class="action-btn action-case">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
                                             <polyline points="14 2 14 8 20 8" />
@@ -452,6 +394,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>

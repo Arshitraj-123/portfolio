@@ -52,11 +52,8 @@ portfolio/
 ├── ⚙️ script.js               # JavaScript functionality
 ├── 🎯 icon.svg                # Site favicon
 ├── 📁 case-studies/           # Detailed project case studies
-│   ├── aibot.html             # AI Bot project case study
 │   ├── bizzflow.html          # BizzFlow project case study
-│   ├── cryptotracker.html     # CryptoTracker case study
 │   ├── cybertrap.html         # CyberTrap case study
-│   ├── shopstreet.html        # ShopStreet case study
 │   └── taskflow.html          # TaskFlow case study
 │
 └── 📁 nextjs-portfolio/       # Next.js version of portfolio
@@ -143,10 +140,9 @@ Grid display of programming languages, frameworks, and tools with hover animatio
 
 ### 🎯 Projects Carousel
 Interactive slider showcasing featured projects:
-- **Shop Street** - Full-stack e-commerce platform
-- **ChatConnect** - Real-time messaging application
-- **DataViz Pro** - Analytics dashboard
-- **TaskAI** - AI-powered task manager
+- **TaskFlow App** - Full-stack task management platform
+- **BizFlow** - Modern CRM solution
+- **CyberTrap** - Agentic scam intelligence honey-pot
 
 Each project includes tech stack tags, descriptions, and links to:
 - Live demo
