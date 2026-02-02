@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ===== CSS VARIABLES - Dark Theme ===== */
+:root {
+  --background: #1a1e2e;
+  --background-secondary: #252a3e;
+  --background-tertiary: #2d3348;
+  --foreground: #ffffff;
+  --foreground-secondary: #a0aec0;
+  --foreground-muted: #718096;
+  --accent-primary: #f56565;
+  --accent-secondary: #ed8936;
+  --sidebar-width: 80px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Outfit', var(--font-sans), sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #f56565 0%, #ed8936 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Gradient Button ===== */
+.btn-gradient {
+  background: linear-gradient(135deg, #f56565 0%, #ed8936 100%);
+  box-shadow: 0 0 40px rgba(245, 101, 101, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(245, 101, 101, 0.4);
+}
+
+/* ===== Section Styles ===== */
+.section {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== Tech Card Hover ===== */
+.tech-card {
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Project Slide ===== */
+.project-img {
+  transition: all 0.3s ease;
+}
+
+.project-slide:hover .project-img-back {
+  transform: rotate(-5deg) translateY(-10px);
+}
+
+.project-slide:hover .project-img-front {
+  transform: rotate(4deg) translateY(10px);
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 24px;
+  }
+}
