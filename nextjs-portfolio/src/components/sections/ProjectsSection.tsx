@@ -83,8 +83,12 @@ export default function ProjectsSection() {
         setCurrentIndex(index);
     };
 
-    const handleLiveViewClick = () => {
-        setShowPopup(true);
+    const handleLiveViewClick = (url: string) => {
+        if (url && url !== '#') {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+            setShowPopup(true);
+        }
     };
 
     const currentProject = projects[currentIndex];
@@ -302,7 +306,7 @@ export default function ProjectsSection() {
                                 {/* Action Buttons */}
                                 <div className="flex flex-wrap gap-3">
                                     <button
-                                        onClick={handleLiveViewClick}
+                                        onClick={() => handleLiveViewClick(currentProject.liveUrl)}
                                         className="flex items-center gap-2 px-5 py-3 bg-[#334155] rounded-lg text-white text-sm font-medium hover:bg-[#475569] transition-all duration-300 border border-[#475569]"
                                     >
                                         <ExternalLink size={16} />
@@ -400,7 +404,10 @@ export default function ProjectsSection() {
 
                                 {/* Buttons */}
                                 <div className="flex flex-wrap gap-2">
-                                    <button onClick={handleLiveViewClick} className="flex items-center gap-2 px-4 py-2.5 bg-[#334155] rounded-lg text-white text-sm font-medium">
+                                    <button
+                                        onClick={() => handleLiveViewClick(currentProject.liveUrl)}
+                                        className="flex items-center gap-2 px-4 py-2.5 bg-[#334155] rounded-lg text-white text-sm font-medium"
+                                    >
                                         <ExternalLink size={14} /> Live view
                                     </button>
                                     <a href={currentProject.codeUrl} target="_blank" className="flex items-center gap-2 px-4 py-2.5 bg-transparent rounded-lg text-white text-sm font-medium border border-[#475569]">
