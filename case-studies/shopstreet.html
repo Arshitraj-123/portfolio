@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopStreet - Case Study | Arshit Raj</title>
+    <meta name="description"
+        content="Case study for ShopStreet - A modern e-commerce platform built with Next.js and Firebase">
+    <link rel="stylesheet" href="../case-study.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="case-header">
+        <a href="../index.html#projects" class="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to Projects
+        </a>
+        <h1 class="case-title">ShopStreet E-Commerce Platform</h1>
+        <p class="case-subtitle">A full-featured e-commerce platform with real-time inventory management, secure
+            payments, and an intuitive shopping experience built for modern consumers.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="case-content">
+        <!-- Live Preview -->
+        <div class="live-preview">
+            <p>You can find the live preview of this webapp at <a href="#"
+                    onclick="alert('Sorry, cannot be previewed now'); return false;">shopstreet.store</a></p>
+        </div>
+
+        <!-- TechStack Section -->
+        <section class="techstack-section">
+            <h2 class="section-title">TechStack</h2>
+
+            <div class="tech-visual">
+                <!-- Orbiting Tech Icons -->
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">🍃</span>
+                </div>
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">🌊</span>
+                </div>
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">📁</span>
+                </div>
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">🔥</span>
+                </div>
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">📊</span>
+                </div>
+                <div class="tech-orbit">
+                    <span style="font-size: 3rem;">🔷</span>
+                </div>
+
+            </div>
+
+            <div class="tech-list">
+                <div class="tech-item">Next.js [TypeScript]</div>
+                <div class="tech-item">MongoDB + Mongoose</div>
+                <div class="tech-item">Firebase Auth</div>
+                <div class="tech-item">Tailwind CSS</div>
+                <div class="tech-item">Stripe Payments</div>
+                <div class="tech-item">Vercel Hosting</div>
+            </div>
+        </section>
+
+        <!-- Data Structure Section -->
+        <section class="data-structure-section">
+            <h2 class="section-title">Data Structure</h2>
+
+            <div class="data-diagram">
+                <div class="data-diagram-header">
+                    <div class="db-icon">
+                        <span style="font-size: 2.5rem;">🍃</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="db-icon">
+                        <span style="font-size: 2.5rem;">🔥</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+
+                <div class="schema-grid">
+                    <div class="schema-table">
+                        <div class="schema-header">UserType</div>
+                        <div class="schema-fields">
+                            <div class="schema-field">
+                                <span class="field-name">_id</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">email</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">wishList</span>
+                                <span class="field-type">string[]</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">cart</span>
+                                <span class="field-type">string[]</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">isSeller</span>
+                                <span class="field-type">boolean</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schema-table">
+                        <div class="schema-header">ProductType</div>
+                        <div class="schema-fields">
+                            <div class="schema-field">
+                                <span class="field-name">_id</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">title</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">price</span>
+                                <span class="field-type">number</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">inventory</span>
+                                <span class="field-type">number</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">rating</span>
+                                <span class="field-type">number</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schema-table">
+                        <div class="schema-header">OrderType</div>
+                        <div class="schema-fields">
+                            <div class="schema-field">
+                                <span class="field-name">_id</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">products</span>
+                                <span class="field-type">OrderItem[]</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">status</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">address</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">total</span>
+                                <span class="field-type">number</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schema-table">
+                        <div class="schema-header">StoreType</div>
+                        <div class="schema-fields">
+                            <div class="schema-field">
+                                <span class="field-name">_id</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">storeName</span>
+                                <span class="field-type">string</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">isVerified</span>
+                                <span class="field-type">boolean</span>
+                            </div>
+                            <div class="schema-field">
+                                <span class="field-name">productIds</span>
+                                <span class="field-type">string[]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Learnt Section -->
+        <section class="learnings-section">
+            <h2 class="section-title">What I Learnt</h2>
+
+            <div class="learning-item">
+                <h3 class="learning-title">Server Components in Next.js 13+</h3>
+                <p class="learning-text">Working with the new App Router taught me how to leverage server components for
+                    better performance. Data fetching on the server reduces client-side JavaScript and improves initial
+                    page load times significantly.</p>
+            </div>
+
+            <div class="learning-item">
+                <h3 class="learning-title">Optimistic UI Updates</h3>
+                <p class="learning-text">For actions like adding items to cart, I implemented optimistic updates that
+                    instantly reflect in the UI while the server processes the request in the background. This makes the
+                    app feel incredibly responsive.</p>
+            </div>
+
+            <div class="learning-item">
+                <h3 class="learning-title">Stripe Integration Best Practices</h3>
+                <p class="learning-text">Integrating Stripe for payments taught me about webhooks, handling payment
+                    intents securely, and the importance of idempotency keys for preventing duplicate charges.</p>
+            </div>
+
+            <div class="learning-item">
+                <h3 class="learning-title">Image Optimization</h3>
+                <p class="learning-text">Using Next.js Image component with proper sizing, lazy loading, and blur
+                    placeholders significantly improved the Core Web Vitals scores, especially LCP.</p>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="conclusion-section">
+            <h2 class="section-title">Conclusion</h2>
+
+            <p class="conclusion-text">Building ShopStreet was an incredible learning experience. The combination of
+                Next.js, MongoDB, and Firebase proved to be a powerful stack for building scalable e-commerce
+                applications. The App Router's server components allowed for excellent performance while maintaining a
+                great developer experience.</p>
+
+            <p class="conclusion-text">I learned the importance of planning database schemas carefully before
+                implementation. Having clear relationships between Users, Products, Orders, and Stores made the
+                development process much smoother and the codebase more maintainable.</p>
+
+            <p class="conclusion-text">The most challenging part was implementing the real-time inventory system to
+                prevent overselling. Using MongoDB transactions and optimistic locking helped solve this issue
+                elegantly.</p>
+
+            <p class="conclusion-thanks">Thank you for taking the time to read about this project.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="case-footer">
+        <a href="../index.html#projects" class="footer-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Projects
+        </a>
+    </footer>
+</body>
+
+</html>
