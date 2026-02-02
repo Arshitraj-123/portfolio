@@ -154,6 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
             const submitBtn = contactForm.querySelector('.btn-submit');
             const originalText = submitBtn.innerHTML;
 
@@ -166,8 +171,17 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             submitBtn.disabled = true;
 
-            // Simulate form submission (replace with actual API call)
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Construct mailto URL
+            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+
+            // Wait a bit to show the "Sending..." status
+            await new Promise(resolve => setTimeout(resolve, 800));
+
+            // Open the user's email client
+            window.location.href = `mailto:rajarshit123@gmail.com?subject=${subject}&body=${body}`;
 
             // Show success state
             submitBtn.innerHTML = `
