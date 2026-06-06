@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, ExternalLink, Database, Lightbulb, BookOpen, ChevronRight } from 'lucide-react';
+import { getTechIcon } from './TechIcons';
 
 interface Project {
     slug: string;
@@ -78,7 +79,7 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
                             transition={{ delay: index * 0.05 }}
                             whileHover={{ y: -5 }}
                         >
-                            <span className="text-3xl">{tech.icon}</span>
+                            <span className="text-3xl">{getTechIcon(tech.name) || tech.icon}</span>
                             <span className="text-sm text-[#a0aec0] text-center">{tech.name}</span>
                         </motion.div>
                     ))}
