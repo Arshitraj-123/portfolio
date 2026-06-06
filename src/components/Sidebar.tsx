@@ -62,7 +62,7 @@ export default function Sidebar() {
     return (
         <>
             {/* Desktop Sidebar — hidden below lg */}
-            <nav className="hidden lg:flex fixed left-0 top-0 w-44 h-screen bg-transparent flex-col justify-center pl-8 z-50">
+            <nav className="hidden lg:flex fixed left-0 top-0 w-44 h-screen bg-[#1a1e2e] flex-col justify-center pl-8 z-50 border-r border-white/5">
                 {/* Brand Identity */}
                 <div className="absolute top-12 left-8 flex flex-col items-start gap-2">
                     <motion.div

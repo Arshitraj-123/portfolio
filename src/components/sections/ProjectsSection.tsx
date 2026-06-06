@@ -101,7 +101,7 @@ export default function ProjectsSection() {
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#667eea]/10 rounded-full blur-3xl" />
             </div>
 
-            <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 {/* Desktop Layout */}
                 <div className="hidden lg:grid grid-cols-12 gap-8 items-start">
 

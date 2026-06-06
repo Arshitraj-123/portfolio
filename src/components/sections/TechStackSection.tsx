@@ -172,7 +172,7 @@ export default function TechStackSection() {
       fontFamily: "'Inter', sans-serif",
     }}>
       <div ref={ref} style={{
-        maxWidth: 960, margin: "0 auto", padding: "clamp(24px, 5vw, 48px) clamp(16px, 4vw, 36px)",
+        maxWidth: 900, margin: "0 auto", padding: "clamp(24px, 5vw, 48px) clamp(16px, 4vw, 48px)",
         display: "flex", flexDirection: "column", gap: 13,
       }}>
 
