@@ -16,7 +16,7 @@ const projects = [
         color1: '#667eea',
         color2: '#764ba2',
         tags: ['React 19', 'Express.js', 'SQLite', 'JWT', 'Vite'],
-        liveUrl: 'https://taskflow-app.vercel.app',
+        liveUrl: 'https://task-flow-tf2q.vercel.app/',
         codeUrl: 'https://github.com/Arshitraj-123/Task-flow',
     },
     {

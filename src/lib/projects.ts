@@ -6,7 +6,7 @@ export const projects = [
         subtitle: 'Modern full-stack task management with secure authentication',
         description: 'A modern, full-stack task management application built with React and Express.js. Features secure JWT authentication, real-time task management, browser notifications, password reset functionality, and a beautiful responsive UI.',
         image: '📋',
-        liveUrl: 'https://taskflow-app.vercel.app',
+        liveUrl: 'https://task-flow-tf2q.vercel.app/',
         codeUrl: 'https://github.com/Arshitraj-123/Task-flow',
         tags: ['React 19', 'Express.js', 'SQLite', 'JWT', 'Vite'],
         techStack: [
