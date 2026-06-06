@@ -29,7 +29,7 @@ interface Props {
 
 export default function CaseStudyContent({ project, nextProject }: Props) {
     return (
-        <main className="max-w-[1200px] mx-auto px-8 py-16">
+        <main className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 w-full overflow-x-hidden">
             {/* Hero */}
             <motion.section
                 className="mb-20"
@@ -37,18 +37,20 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h1 className="text-5xl font-bold gradient-text mb-4">{project.title}</h1>
-                <p className="text-2xl text-[#a0aec0] mb-6">{project.subtitle}</p>
-                <p className="text-lg text-[#718096] max-w-3xl">{project.description}</p>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4">{project.title}</h1>
+                <p className="text-lg sm:text-xl lg:text-2xl text-[#a0aec0] mb-6">{project.subtitle}</p>
+                <p className="text-base sm:text-lg text-[#718096] max-w-3xl">{project.description}</p>
 
-                <div className="mt-8 p-4 bg-[#252a3e] rounded-xl inline-flex items-center gap-3">
-                    <ExternalLink size={20} className="text-[#f56565]" />
-                    <span className="text-[#a0aec0]">Live at</span>
+                <div className="mt-6 sm:mt-8 p-4 bg-[#252a3e] rounded-xl flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
+                    <div className="flex items-center gap-2">
+                        <ExternalLink size={20} className="text-[#f56565] shrink-0" />
+                        <span className="text-[#a0aec0]">Live at</span>
+                    </div>
                     <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#f56565] hover:underline font-medium cursor-pointer"
+                        className="text-[#f56565] hover:underline font-medium cursor-pointer break-all text-sm sm:text-base"
                     >
                         {project.liveUrl.replace('https://', '')}
                     </a>
@@ -100,8 +102,8 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
                     <h2 className="text-2xl font-bold text-white">Data Structure</h2>
                 </div>
 
-                <div className="bg-[#252a3e] rounded-2xl p-8">
-                    <div className="flex gap-6 mb-8">
+                <div className="bg-[#252a3e] rounded-2xl p-4 sm:p-6 lg:p-8">
+                    <div className="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-8">
                         <div className="flex items-center gap-2 px-4 py-2 bg-[#1a1e2e] rounded-lg">
                             <span className="text-xl">🗄️</span>
                             <span className="text-[#a0aec0]">{project.dataStructure.database}</span>
@@ -176,7 +178,7 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
                     <h2 className="text-2xl font-bold text-white">Conclusion</h2>
                 </div>
 
-                <div className="bg-[#252a3e] rounded-2xl p-8 space-y-4">
+                <div className="bg-[#252a3e] rounded-2xl p-4 sm:p-6 lg:p-8 space-y-4">
                     {project.conclusion.map((paragraph, index) => (
                         <p key={index} className="text-[#a0aec0] text-lg leading-relaxed">
                             {paragraph}
@@ -196,18 +198,19 @@ export default function CaseStudyContent({ project, nextProject }: Props) {
             >
                 <Link
                     href={`/projects/${nextProject.slug}`}
-                    className="block bg-gradient-to-r from-[#252a3e] to-[#2d3348] rounded-2xl p-8 hover:from-[#2d3348] hover:to-[#353a50] transition-all group"
+                    className="block bg-gradient-to-r from-[#252a3e] to-[#2d3348] rounded-2xl p-5 sm:p-8 hover:from-[#2d3348] hover:to-[#353a50] transition-all group"
                 >
-                    <div className="flex items-center justify-between">
-                        <div>
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="min-w-0">
                             <span className="text-[#718096] text-sm uppercase tracking-wider">Next Project</span>
-                            <h3 className="text-2xl font-bold text-white mt-2 group-hover:text-[#f56565] transition-colors">
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mt-2 group-hover:text-[#f56565] transition-colors">
                                 {nextProject.title}
                             </h3>
-                            <p className="text-[#a0aec0] mt-1">{nextProject.subtitle}</p>
+                            <p className="text-[#a0aec0] mt-1 text-sm sm:text-base">{nextProject.subtitle}</p>
                         </div>
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#f56565] to-[#ed8936] flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <ChevronRight size={32} className="text-white" />
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 rounded-full bg-gradient-to-r from-[#f56565] to-[#ed8936] flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <ChevronRight size={28} className="text-white sm:hidden" />
+                            <ChevronRight size={32} className="text-white hidden sm:block" />
                         </div>
                     </div>
                 </Link>

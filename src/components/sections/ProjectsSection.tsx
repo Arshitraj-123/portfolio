@@ -47,10 +47,10 @@ const projects = [
     },
 ];
 
-// Slide animation variants
+// Slide animation variants — smaller offset on mobile to prevent overflow
 const slideVariants = {
     enter: (direction: number) => ({
-        x: direction > 0 ? 400 : -400,
+        x: direction > 0 ? 80 : -80,
         opacity: 0,
     }),
     center: {
@@ -58,7 +58,7 @@ const slideVariants = {
         opacity: 1,
     },
     exit: (direction: number) => ({
-        x: direction < 0 ? 400 : -400,
+        x: direction < 0 ? 80 : -80,
         opacity: 0,
     }),
 };
@@ -94,14 +94,14 @@ export default function ProjectsSection() {
     const currentProject = projects[currentIndex];
 
     return (
-        <section id="projects" className="relative min-h-screen py-20 overflow-hidden" style={{ background: '#0f172a' }}>
+        <section id="projects" className="relative min-h-screen py-12 sm:py-16 lg:py-20 overflow-hidden" style={{ background: '#0f172a' }}>
             {/* Subtle background gradient */}
             <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c9304a]/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#667eea]/10 rounded-full blur-3xl" />
             </div>
 
-            <div className="relative max-w-[1200px] mx-auto px-6 lg:px-8">
+            <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 {/* Desktop Layout */}
                 <div className="hidden lg:grid grid-cols-12 gap-8 items-start">
 
@@ -336,10 +336,10 @@ export default function ProjectsSection() {
                 {/* Mobile/Tablet Layout */}
                 <div className="lg:hidden">
                     {/* Title */}
-                    <div className="text-center mb-10">
+                    <div className="text-center mb-8 sm:mb-10">
                         <h2>
-                            <span className="text-[#c9304a] italic font-light text-xl">Recent </span>
-                            <span className="text-white font-bold text-4xl tracking-tight">Work</span>
+                            <span className="text-[#c9304a] italic font-light text-lg sm:text-xl">Recent </span>
+                            <span className="text-white font-bold text-3xl sm:text-4xl tracking-tight">Work</span>
                         </h2>
                     </div>
 

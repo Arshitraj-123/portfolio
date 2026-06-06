@@ -8,7 +8,7 @@ export default function AboutSection() {
             id="about"
             className="section min-h-screen bg-gradient-to-br from-[#1a1e2e] to-[#252a3e] relative overflow-hidden"
         >
-            <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center w-full">
                 {/* Text Content */}
                 <motion.div
                     className="text-center lg:text-left order-2 lg:order-1"
@@ -16,32 +16,32 @@ export default function AboutSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="text-[#f56565] text-lg font-medium mb-2 block">Hello, I am</span>
-                    <h1 className="text-5xl lg:text-6xl font-extrabold mb-3 gradient-text">
+                    <span className="text-[#f56565] text-base sm:text-lg font-medium mb-2 block">Hello, I am</span>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-3 gradient-text">
                         Arshit Raj
                     </h1>
-                    <p className="text-2xl text-[#a0aec0] font-medium mb-6">
+                    <p className="text-xl sm:text-2xl text-[#a0aec0] font-medium mb-6">
                         Full Stack Developer
                     </p>
-                    <p className="text-[#a0aec0] text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
+                    <p className="text-[#a0aec0] text-base sm:text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
                         Passionate about creating beautiful, performant web applications
                         with modern technologies. I transform ideas into elegant digital
                         experiences that users love.
                     </p>
 
-                    <div className="flex gap-4 justify-center lg:justify-start">
+                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                         <button
                             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="btn-gradient px-8 py-4 rounded-2xl text-white font-semibold flex items-center gap-2"
+                            className="btn-gradient px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-white font-semibold flex items-center gap-2 text-sm sm:text-base"
                         >
                             View My Work
-                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </button>
                         <button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 rounded-2xl border-2 border-[#f56565] text-[#f56565] font-semibold hover:bg-[#f56565] hover:text-white transition-all duration-300"
+                            className="px-6 sm:px-8 py-3 sm:py-4 rounded-2xl border-2 border-[#f56565] text-[#f56565] font-semibold hover:bg-[#f56565] hover:text-white transition-all duration-300 text-sm sm:text-base"
                         >
                             Contact Me
                         </button>
@@ -56,20 +56,20 @@ export default function AboutSection() {
                     transition={{ duration: 1, delay: 0.3 }}
                 >
                     {/* Floating Shapes */}
-                    <div className="absolute inset-[-100px] pointer-events-none">
-                        <div className="absolute w-20 h-20 bg-[#667eea]/30 rounded-full top-0 right-[20%] animate-float" />
-                        <div className="absolute w-12 h-12 bg-[#f56565]/30 rounded-full bottom-[20%] left-0 animate-float" style={{ animationDelay: '2s' }} />
-                        <div className="absolute w-8 h-8 bg-[#ed8936]/30 rounded-full top-[40%] right-0 animate-float" style={{ animationDelay: '4s' }} />
+                    <div className="absolute inset-[-60px] sm:inset-[-100px] pointer-events-none">
+                        <div className="absolute w-14 h-14 sm:w-20 sm:h-20 bg-[#667eea]/30 rounded-full top-0 right-[20%] animate-float" />
+                        <div className="absolute w-8 h-8 sm:w-12 sm:h-12 bg-[#f56565]/30 rounded-full bottom-[20%] left-0 animate-float" style={{ animationDelay: '2s' }} />
+                        <div className="absolute w-6 h-6 sm:w-8 sm:h-8 bg-[#ed8936]/30 rounded-full top-[40%] right-0 animate-float" style={{ animationDelay: '4s' }} />
                     </div>
 
                     {/* Avatar Container */}
-                    <div className="relative w-72 h-72">
+                    <div className="relative w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72">
                         {/* Glow */}
                         <div className="absolute inset-[-20px] bg-gradient-to-br from-[#f56565] to-[#ed8936] rounded-full blur-[40px] opacity-40 animate-pulse-glow" />
 
                         {/* Avatar */}
                         <div className="relative w-full h-full bg-gradient-to-br from-[#f56565] to-[#ed8936] rounded-full flex items-center justify-center shadow-2xl">
-                            <span className="text-7xl font-extrabold text-white drop-shadow-lg">AR</span>
+                            <span className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg">AR</span>
                         </div>
                     </div>
                 </motion.div>

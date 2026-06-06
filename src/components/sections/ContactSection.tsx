@@ -38,24 +38,24 @@ export default function ContactSection() {
     };
 
     return (
-        <section id="contact" className="section bg-[#1a1e2e] py-20 min-h-screen flex items-center">
-            <div className="max-w-[1000px] mx-auto px-8 w-full">
+        <section id="contact" className="section bg-[#1a1e2e] py-12 sm:py-20 min-h-screen flex items-center">
+            <div className="max-w-[1000px] mx-auto w-full">
                 {/* Header */}
-                <div className="mb-12">
+                <div className="mb-8 sm:mb-12">
                     <h2>
-                        <span className="text-[#f97316] italic font-normal text-2xl block">Get In</span>
-                        <span className="text-[#f97316] font-extrabold text-5xl">Touch</span>
+                        <span className="text-[#f97316] italic font-normal text-xl sm:text-2xl block">Get In</span>
+                        <span className="text-[#f97316] font-extrabold text-4xl sm:text-5xl">Touch</span>
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                     {/* Left: Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-2xl font-bold text-white mb-4">
+                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                             Let&apos;s work together
                         </h3>
                         <p className="text-[#a0aec0] mb-8 leading-relaxed">
@@ -70,7 +70,7 @@ export default function ContactSection() {
                                 </div>
                                 <a
                                     href="mailto:rajarshit123@gmail.com"
-                                    className="text-white hover:text-[#f97316] transition-colors"
+                                    className="text-white hover:text-[#f97316] transition-colors break-all text-sm sm:text-base"
                                 >
                                     rajarshit123@gmail.com
                                 </a>

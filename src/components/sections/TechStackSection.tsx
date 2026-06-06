@@ -22,13 +22,15 @@ interface CardProps {
   delay?: number;
   vis: boolean;
   style?: CSSProperties;
+  className?: string;
   children: ReactNode;
 }
 
-function Card({ delay = 0, vis, style, children }: CardProps) {
+function Card({ delay = 0, vis, style, className = "", children }: CardProps) {
   const [hov, setHov] = useState(false);
   return (
     <div
+      className={className}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
@@ -170,13 +172,12 @@ export default function TechStackSection() {
       fontFamily: "'Inter', sans-serif",
     }}>
       <div ref={ref} style={{
-        maxWidth: 960, margin: "0 auto", padding: "48px 36px",
+        maxWidth: 960, margin: "0 auto", padding: "clamp(24px, 5vw, 48px) clamp(16px, 4vw, 36px)",
         display: "flex", flexDirection: "column", gap: 13,
       }}>
 
-        {/* ROW 1 — JS big + 4 smalls + Tailwind pill / Node + Express + MUI + Framer + SASS pill */}
-        <div style={{
-          display: "grid",
+        {/* ── DESKTOP bento grid (hidden on mobile via CSS class) ── */}
+        <div className="hidden md:grid" style={{
           gridTemplateColumns: "170px 90px 90px 90px 90px 1fr",
           gridTemplateRows: "90px 90px",
           gap: 12,
@@ -254,8 +255,94 @@ export default function TechStackSection() {
           </Card>
         </div>
 
-        {/* ROW 2 — TypeScript + Styled Components */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        {/* ── MOBILE simple grid (3 cols, shown only below md) ── */}
+        <div className="grid md:hidden" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+          {/* JS */}
+          <Card delay={d(0)} vis={vis} style={{
+            background: "#f5c518", borderRadius: 16, height: 80,
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontSize: "2.2rem", fontWeight: 900, color: "#000",
+          }}>JS</Card>
+
+          {/* React */}
+          <Card delay={d(1)} vis={vis} style={sm({ background: "#4a5568", borderRadius: 16, height: 80 })}>
+            <ReactIcon />
+          </Card>
+
+          {/* Next.js */}
+          <Card delay={d(2)} vis={vis} style={sm({ background: "#0a0a0a", borderRadius: 16, height: 80 })}>
+            <NextIcon />
+          </Card>
+
+          {/* HTML5 */}
+          <Card delay={d(3)} vis={vis} style={sm({ background: "#e44d26", borderRadius: 16, height: 80 })}>
+            <span style={{ fontSize: "1.8rem", fontWeight: 900, color: "#fff" }}>5</span>
+          </Card>
+
+          {/* CSS3 */}
+          <Card delay={d(4)} vis={vis} style={sm({ background: "#2965f1", borderRadius: 16, height: 80 })}>
+            <span style={{ fontSize: "1.8rem", fontWeight: 900, color: "#fff" }}>3</span>
+          </Card>
+
+          {/* Tailwind */}
+          <Card delay={d(5)} vis={vis} style={{
+            background: "#0f3b3b", borderRadius: 16, height: 80,
+            display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+            color: "#38bdf8", fontWeight: 700, fontSize: "0.75rem",
+          }}>
+            <TailwindIcon /> Tailwind
+          </Card>
+
+          {/* Node.js */}
+          <Card delay={d(6)} vis={vis} style={sm({ background: "#233d1b", borderRadius: 16, height: 80 })}>
+            <NodeIcon />
+          </Card>
+
+          {/* Express */}
+          <Card delay={d(7)} vis={vis} style={sm({ background: "#6b7280", borderRadius: 16, height: 80 })}>
+            <span style={{ fontSize: "1rem", fontWeight: 300, color: "#ddd", letterSpacing: 2 }}>ex</span>
+          </Card>
+
+          {/* MUI */}
+          <Card delay={d(8)} vis={vis} style={sm({ background: "#0d1b6e", borderRadius: 16, height: 80 })}>
+            <MUIIcon />
+          </Card>
+
+          {/* Framer */}
+          <Card delay={d(9)} vis={vis} style={sm({ background: "#1a0533", borderRadius: 16, height: 80 })}>
+            <FramerIcon />
+          </Card>
+
+          {/* SASS */}
+          <Card delay={d(10)} vis={vis} style={{
+            background: "#d61a7f", borderRadius: 16, height: 80,
+            display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+            color: "#fff", fontWeight: 800, fontSize: "0.75rem",
+          }}>
+            <svg width="22" height="22" viewBox="0 0 64 64">
+              <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle"
+                fontSize="38" fontFamily="Georgia,serif" fontStyle="italic" fill="#fff">S</text>
+            </svg>
+            SASS
+          </Card>
+
+          {/* Typescript (mobile row) */}
+          <Card delay={d(11)} vis={vis} style={{
+            background: "#1a4080", borderRadius: 16, height: 80,
+            display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+            gridColumn: "span 3",
+          }}>
+            <div style={{
+              background: "#3178c6", borderRadius: 8, width: 36, height: 36, flexShrink: 0,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: "0.85rem", fontWeight: 900, color: "#fff",
+            }}>TS</div>
+            <span style={{ fontSize: "0.95rem", fontWeight: 600, color: "#fff" }}>TypeScript</span>
+          </Card>
+        </div>
+
+        {/* ROW 2 — TypeScript + Styled Components (desktop only) */}
+        <div className="hidden md:grid" style={{ gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <Card delay={d(11)} vis={vis} style={{
             background: "#1a4080", borderRadius: 20, height: 78,
             display: "flex", alignItems: "center", gap: 18, padding: "0 28px",
@@ -287,7 +374,7 @@ export default function TechStackSection() {
         </div>
 
         {/* ROW 3 — Python, Flask, MongoDB, Firebase */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12 }} className="md:grid-cols-4">
           {[
             { bg: "#1b3a4a", label: "Python",   icon: <PythonIcon /> },
             { bg: "#17413b", label: "Flask",    icon: <FlaskIcon /> },
@@ -295,10 +382,11 @@ export default function TechStackSection() {
             { bg: "#9e7010", label: "Firebase", icon: <FirebaseIcon /> },
           ].map((item, i) => (
             <Card key={item.label} delay={d(13 + i)} vis={vis} style={{
-              background: item.bg, borderRadius: 24, height: 200,
+              background: item.bg, borderRadius: 24,
+              height: "clamp(140px, 20vw, 200px)",
               display: "flex", flexDirection: "column",
               alignItems: "center", justifyContent: "center", gap: 16,
-              color: "#fff", fontWeight: 700, fontSize: "1.1rem",
+              color: "#fff", fontWeight: 700, fontSize: "clamp(0.85rem, 2vw, 1.1rem)",
             }}>
               {item.icon}
               {item.label}

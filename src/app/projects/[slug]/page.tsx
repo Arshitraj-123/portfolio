@@ -52,15 +52,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="min-h-screen bg-[#1a1e2e]">
             {/* Header */}
             <header className="sticky top-0 z-50 bg-[#1a1e2e]/95 backdrop-blur-xl border-b border-white/5">
-                <div className="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
+                <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
                     <Link
                         href="/#projects"
-                        className="flex items-center gap-2 text-[#a0aec0] hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-[#a0aec0] hover:text-white transition-colors text-sm sm:text-base"
                     >
                         <ArrowLeft size={20} />
                         Back to Projects
                     </Link>
-                    <div className="flex gap-3">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 w-full sm:w-auto">
                         <LiveDemoButton url={project.liveUrl} />
                         <a
                             href={project.codeUrl}
