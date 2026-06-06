@@ -39,7 +39,7 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className="section bg-[#1a1e2e] py-12 sm:py-20 min-h-screen flex items-center">
-            <div className="max-w-[1000px] mx-auto w-full">
+            <div className="max-w-[1000px] mx-auto px-4 sm:px-8 w-full">
                 {/* Header */}
                 <div className="mb-8 sm:mb-12">
                     <h2>
