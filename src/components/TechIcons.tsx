@@ -195,6 +195,55 @@ export const AngularMaterialIcon = () => (
   </svg>
 );
 
+export const StreamlitIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="16" fill="#FF4B4B" />
+    <path d="M64 28L24 68h80L64 28z" fill="white" />
+    <path d="M64 56L24 96h80L64 56z" fill="white" opacity="0.6" />
+  </svg>
+);
+
+export const PlotlyIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="16" fill="#3F4F75" />
+    <rect x="24" y="70" width="16" height="34" rx="3" fill="#AB63FA" />
+    <rect x="46" y="50" width="16" height="54" rx="3" fill="#00CC96" />
+    <rect x="68" y="36" width="16" height="68" rx="3" fill="#636EFA" />
+    <rect x="90" y="56" width="16" height="48" rx="3" fill="#EF553B" />
+  </svg>
+);
+
+export const FoliumIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="16" fill="#77b829" />
+    <path d="M64 20C44 40 34 64 34 90h16c0-22 8-42 24-58 16 16 24 36 24 58h16c0-26-10-50-30-70L64 20z" fill="white" />
+    <circle cx="64" cy="90" r="8" fill="white" />
+  </svg>
+);
+
+export const PandasIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="16" fill="#150458" />
+    <rect x="36" y="20" width="14" height="30" rx="2" fill="white" />
+    <rect x="36" y="56" width="14" height="14" rx="2" fill="#E70488" />
+    <rect x="36" y="76" width="14" height="30" rx="2" fill="white" />
+    <rect x="58" y="40" width="14" height="48" rx="2" fill="white" />
+    <rect x="80" y="20" width="14" height="30" rx="2" fill="white" />
+    <rect x="80" y="56" width="14" height="14" rx="2" fill="#E70488" />
+    <rect x="80" y="76" width="14" height="30" rx="2" fill="white" />
+  </svg>
+);
+
+export const NumPyIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 128 128">
+    <rect width="128" height="128" rx="16" fill="#4DABCF" />
+    <path d="M64 24L28 44v40l36 20 36-20V44L64 24z" fill="#4D77CF" />
+    <path d="M64 24L28 44l36 20 36-20L64 24z" fill="#4DABCF" />
+    <path d="M64 64v40l36-20V44L64 64z" fill="#4D77CF" opacity="0.7" />
+    <text x="64" y="72" textAnchor="middle" dominantBaseline="middle" fontSize="28" fontWeight="800" fontFamily="Arial, sans-serif" fill="white">N</text>
+  </svg>
+);
+
 // Map tech names (including partial matches) to icon components
 const iconMap: Record<string, () => ReactNode> = {
   'react': ReactIcon,
@@ -221,6 +270,11 @@ const iconMap: Record<string, () => ReactNode> = {
   'groq': GroqIcon,
   'llama': GroqIcon,
   'vite': ViteIcon,
+  'streamlit': StreamlitIcon,
+  'plotly': PlotlyIcon,
+  'folium': FoliumIcon,
+  'pandas': PandasIcon,
+  'numpy': NumPyIcon,
 };
 
 /**
